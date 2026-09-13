@@ -11,6 +11,11 @@ on:
   workflow_dispatch:
 
 jobs:
+  typos:
+    name: "📝 Check typos"
+    if: always()
+    uses: hrzlgnm/actions/.github/workflows/typos-reusable.yml@275b5f2d90d762bd71567db08b250d8ba7cdb274 # v2.14.4
+
   fmt:
     name: "📐 fmt"
     runs-on: ubuntu-latest
@@ -70,6 +75,9 @@ jobs:
         shell: bash
         run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 
+      - name: 🛠️🚀
+        uses: ./.github/actions/setup-sccache
+
       - name: ✅ Run tests
         shell: bash
         run: cargo test
@@ -109,6 +117,7 @@ jobs:
       - clippy
       - test
       - js
+      - typos
     if: always()
     steps:
       - name: Check whether the needed jobs succeeded or failed
