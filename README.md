@@ -24,7 +24,7 @@ Add the plugin to your `src-tauri/Cargo.toml`:
 
 ```toml
 [dependencies]
-tauri-plugin-android-update = "0.1"
+tauri-plugin-android-update = "0.2"
 tauri-plugin-opener = "2"
 ```
 
@@ -88,8 +88,8 @@ if (update) {
 }
 ```
 
-Frontends without a JavaScript runtime (e.g. the Leptos frontend in this
-workspace) invoke the commands directly instead:
+Frontends without a JavaScript runtime invoke the commands directly
+instead:
 
 - `check` — fetches the `latest.json` update manifest from the latest release,
   compares its version against the installed one, and resolves to the update
