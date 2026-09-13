@@ -30,6 +30,7 @@ jobs:
     if: inputs.publish || inputs.dry_run
     permissions:
       contents: read
+      id-token: write # needed for crates.io trusted publishing (OIDC)
     runs-on: ubuntu-latest
     name: 📦 Publish to crates.io
     steps:
@@ -64,8 +65,8 @@ jobs:
       - name: 📦 Publish to crates.io
         if: inputs.publish && !inputs.dry_run
         shell: bash
-        env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        # No registry token: cargo exchanges the GitHub OIDC token via
+        # the trusted publisher registered for this repo on crates.io.
         run: |
           set -euo pipefail
           cargo publish --package tauri-plugin-android-update
@@ -81,6 +82,7 @@ jobs:
     if: inputs.publish || inputs.dry_run
     permissions:
       contents: read
+      id-token: write # needed for npm trusted publishing (OIDC)
     runs-on: ubuntu-latest
     name: 📦 Publish to npm
     steps:
@@ -114,13 +116,13 @@ jobs:
       - name: 📦 Publish to npm
         if: inputs.publish && !inputs.dry_run
         shell: bash
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # No auth token: npm exchanges the GitHub OIDC token via the
+        # trusted publisher registered for this package on npmjs.com.
         run: |
           set -euo pipefail
           npm ci
           npm run build
-          npm publish --access public
+          npm publish --provenance --access public
 
       - name: 📦 Dry-run publish to npm
         if: inputs.dry_run
