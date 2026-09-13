@@ -5,6 +5,13 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.2.1](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.2.0...tauri-plugin-android-update-v0.2.1) (2026-09-13)
+
+
+### Bug Fixes
+
+* correct Quick Start version and workspace reference ([#6](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/6)) ([e57533c](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/e57533c722a620f9f7655cf0fd56db7857bbd37d))
+
 ## [0.2.0] - 2026-09-10 [compare](https://github.com/hrzlgnm/mdns-browser/compare/tauri-plugin-android-update-v0.1.2...tauri-plugin-android-update-v0.2.0)
 
 ### Added
@@ -36,5 +43,3 @@ This changelog is auto-generated from commits that modify this crate.
 - Register updater commands as namespaced plugin commands (#2500) ([#2500](https://github.com/hrzlgnm/mdns-browser/pull/2500))
 
 - *(tauri-plugin-android-update)* Bump tauri-plugin-android-update to 0.1.1
-
-
