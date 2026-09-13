@@ -73,3 +73,5 @@ Mandatory gate: after validation passes on the final commit(s),
 run a two-axis review (repo standards incl. this file versus the
 originating request) and fix its findings before pushing or
 opening a PR.
+Keep pull request descriptions to summary and issue references;
+omit testing recaps, CI and Validation already cover those.
