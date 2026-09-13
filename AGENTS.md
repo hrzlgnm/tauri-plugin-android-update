@@ -25,6 +25,7 @@ self-install on Google Play–distributed apps.
   `cargo metadata --locked`.
 - JavaScript: `npm ci`, `npm run build` (rollup + `tsc`, Node 24).
 - Workflows: `actionlint .github/workflows/*.yml`.
+- Text: `typos` (config in `typos.toml`).
 - Renovate config: `npx --yes -p renovate@latest renovate-config-validator .github/renovate.json5`.
 - Every commit must compile, pass its tests, and be format- and
   lint-clean. No `unsafe` code, no `#[allow(warnings)]`.
