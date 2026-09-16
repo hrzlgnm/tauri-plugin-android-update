@@ -139,7 +139,7 @@ jobs:
           set -euo pipefail
           npm ci
           npm run build
-          npm publish --provenance --access public
+          npm stage publish
 
   publish:
     # Flips the draft live only when every publish job succeeded. A cancelled
