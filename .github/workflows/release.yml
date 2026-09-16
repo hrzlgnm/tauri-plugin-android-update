@@ -17,7 +17,7 @@ permissions:
 jobs:
   release-please:
     name: "🤖 Release Please"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       prs_created: ${{ steps.release.outputs.prs_created }}
@@ -148,7 +148,7 @@ jobs:
     needs: [release-please, publish_crate, publish_npm]
     if: needs.release-please.outputs.release_created == 'true'
     name: "📢 Publish Release"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: write # to publish the draft release
     steps:

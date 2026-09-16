@@ -59,6 +59,9 @@ those install steps without proving `glib-sys` leaves the graph.
   `release-guard.yml` demotes hand-published drafts to
   pre-release. There is no manual publish workflow — never publish
   the draft by hand.
+- Runners: short jobs (tag checks, release-please, draft
+  promotion, release guard) use `ubuntu-slim`; toolchain and build
+  jobs stay on `ubuntu-latest`.
 
 ## Commits
 

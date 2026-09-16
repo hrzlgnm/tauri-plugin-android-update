@@ -13,7 +13,7 @@ on:
 jobs:
   check-release:
     name: "🏷️ Check release tag"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       is_release: ${{ steps.check.outputs.is_release }}
     steps:
