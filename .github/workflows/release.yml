@@ -45,3 +45,121 @@ jobs:
     uses: hrzlgnm/actions/.github/workflows/approve-bot-pr-reusable.yml@03b79955b43e4b4ae1678541e9d315d4f24c847d # v2.14.8
     with:
       branch: release-please--branches--main--components--tauri-plugin-android-update
+
+  publish_crate:
+    needs: [release-please]
+    if: needs.release-please.outputs.release_created == 'true'
+    permissions:
+      contents: read
+      id-token: write # needed for crates.io trusted publishing (OIDC)
+    runs-on: ubuntu-latest
+    name: 📦 Publish to crates.io
+    steps:
+      - name: 🔄 Checkout release tag
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ needs.release-please.outputs.tag_name }}
+
+      - name: 🦀 Setup Rust
+        uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+
+      - name: 🧰 Install Tauri system dependencies
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: 🔍 Verify tag matches crate version
+        shell: bash
+        env:
+          TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          set -euo pipefail
+          EXPECTED_VERSION="${TAG##*-v}"
+          ACTUAL_VERSION=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[] | select(.name == "tauri-plugin-android-update") | .version')
+          if [ "$ACTUAL_VERSION" != "$EXPECTED_VERSION" ]; then
+            echo "Error: crate version ($ACTUAL_VERSION) does not match tag $TAG (expected $EXPECTED_VERSION)."
+            exit 1
+          fi
+          echo "Version: $ACTUAL_VERSION"
+
+      - name: 🔐 Authenticate with crates.io (OIDC)
+        id: auth
+        uses: rust-lang/crates-io-auth-action@c6f97d42243bad5fab37ca0427f495c86d5b1a18 # v1.0.5
+
+      - name: 📦 Publish to crates.io
+        shell: bash
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}
+        run: |
+          set -euo pipefail
+          cargo publish --package tauri-plugin-android-update
+
+  publish_npm:
+    needs: [release-please]
+    if: needs.release-please.outputs.release_created == 'true'
+    permissions:
+      contents: read
+      id-token: write # needed for npm trusted publishing (OIDC)
+    runs-on: ubuntu-latest
+    name: 📦 Publish to npm
+    steps:
+      - name: 🔄 Checkout release tag
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ needs.release-please.outputs.tag_name }}
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: 🔍 Verify lockstep versions
+        shell: bash
+        env:
+          TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          set -euo pipefail
+          EXPECTED_VERSION="${TAG##*-v}"
+          NPM_VERSION=$(npm pkg get version | tr -d '"')
+          if [ "$NPM_VERSION" != "$EXPECTED_VERSION" ]; then
+            echo "Error: npm package version ($NPM_VERSION) does not match tag $TAG (expected $EXPECTED_VERSION)."
+            exit 1
+          fi
+          echo "Version: $NPM_VERSION"
+
+      - name: 📦 Publish to npm
+        shell: bash
+        # No auth token: npm exchanges the GitHub OIDC token via the
+        # trusted publisher registered for this package on npmjs.com.
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+          npm publish --provenance --access public
+
+  publish:
+    # Flips the draft live only when every publish job succeeded. A cancelled
+    # or failed publish skips this job, so a partial release never goes live.
+    # This job is the only proper publisher: leave the draft alone.
+    needs: [release-please, publish_crate, publish_npm]
+    if: needs.release-please.outputs.release_created == 'true'
+    name: "📢 Publish Release"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to publish the draft release
+    steps:
+      - name: 🔄 Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: 📢 Publish draft release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG_NAME: ${{ needs.release-please.outputs.tag_name }}
+        run: gh release edit "$TAG_NAME" --draft=false --prerelease=false
