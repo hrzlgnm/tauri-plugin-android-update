@@ -53,6 +53,15 @@ those install steps without proving `glib-sys` leaves the graph.
   crates.io, `npm publish --provenance` for npm. Both publishers
   must be registered before the first publish; the workflows fail
   otherwise.
+- Publishing is automatic: release-please owns the draft release
+  and tag, the `release.yml` workflow publishes the crate and the
+  npm package and only then flips the draft live, and
+  `release-guard.yml` demotes hand-published drafts to
+  pre-release. There is no manual publish workflow — never publish
+  the draft by hand.
+- Runners: short jobs (tag checks, release-please, draft
+  promotion, release guard) use `ubuntu-slim`; toolchain and build
+  jobs stay on `ubuntu-latest`.
 
 ## Commits
 
