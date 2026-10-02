@@ -5,6 +5,14 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.1](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.0...tauri-plugin-android-update-v0.3.1) (2026-10-02)
+
+
+### Bug Fixes
+
+* **deps:** update rust crate tauri-plugin-opener to v2.7.0 ([#30](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/30)) ([4751e0f](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/4751e0fe67fcd4699b009e8bd52a70f6eec87394))
+* **deps:** update tauri monorepo to v2.12.1 ([#32](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/32)) ([4943058](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/49430583767c6a86793d100f68caa00ed1a4a4bf))
+
 ## [0.3.0](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.2.1...tauri-plugin-android-update-v0.3.0) (2026-09-28)
 
 
