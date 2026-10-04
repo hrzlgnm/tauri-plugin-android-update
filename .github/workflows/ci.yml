@@ -76,6 +76,7 @@ jobs:
               - 'Cargo.toml'
               - 'Cargo.lock'
               - '.github/workflows/ci.yml'
+              - '.github/actions/setup-sccache/**'
             bindings:
               - 'guest-js/**'
               - 'package.json'
