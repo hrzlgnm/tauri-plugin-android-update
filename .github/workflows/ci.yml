@@ -55,7 +55,7 @@ jobs:
     needs:
       - check-release
     if: needs.check-release.outputs.is_release != 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     outputs:
       rust: ${{ steps.filter.outputs.rust }}
       bindings: ${{ steps.filter.outputs.bindings }}
@@ -171,7 +171,7 @@ jobs:
     if: needs.check-release.outputs.is_release != 'true' && needs.changes.outputs.bindings == 'true'
     permissions:
       contents: read
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: 🔄 Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -196,7 +196,7 @@ jobs:
 
   all-required-green: # This job does nothing and is only used for the branch protection
     name: CI Status
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs:
       - check-release
       - changes
