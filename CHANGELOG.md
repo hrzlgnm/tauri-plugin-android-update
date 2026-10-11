@@ -5,6 +5,27 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.2](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.1...tauri-plugin-android-update-v0.3.2) (2026-10-11)
+
+
+### Dependencies
+
+* update actions/setup-node digest to 949feb2 ([#46](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/46)) ([c87dd0e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/c87dd0eded6b75b44e56882c0afd44c73a524832))
+* update dependency rollup to v4.64.0 ([#44](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/44)) ([5d858ec](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/5d858ec39c24997c2e59a8033efe38029775a753))
+* update dependency rollup to v4.64.1 ([#50](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/50)) ([4bb9f7f](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/4bb9f7f8378b43f64bf0f0bd067908e59f248f85))
+* update dependency rollup to v4.64.2 ([#51](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/51)) ([cf57775](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/cf577754ebf62cfcb73a2d9ae7e58e9bcd500970))
+* update dtolnay/rust-toolchain digest to 686976e ([#47](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/47)) ([8924806](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/892480660fa6e0c9abf2bb90077bf75eafa5ea2a))
+* update hrzlgnm/actions action to v2.14.11 ([#43](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/43)) ([84810c2](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/84810c2770ebe2c44e3913883191d6fdbc57880f))
+* update rust crate serde_json to v1.0.152 ([#52](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/52)) ([3761f1b](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/3761f1bcdfccf57eab320782c7806f342fe5eba9))
+* update rust crate tauri to v2.12.2 ([#48](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/48)) ([802082a](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/802082a89f4dc782912c26d4f6e9cf10937b2e11))
+* update rust crate tauri to v2.12.3 ([#53](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/53)) ([6b5a781](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/6b5a7817714ec6ba7d4fbe15661c5caed54ffdda))
+* update rust crate tauri-plugin-opener to v2.7.1 ([#54](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/54)) ([a4293fc](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/a4293fc51033e111db4ab2c2134f97cb02bb5ebe))
+
+
+### Miscellaneous Chores
+
+* use ubuntu-slim for 4 jobs ([#49](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/49)) ([f9b9046](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/f9b904675efd0c7dc9696aaa2a0b10e56ab57cf2))
+
 ## [0.3.1](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.0...tauri-plugin-android-update-v0.3.1) (2026-10-05)
 
 
