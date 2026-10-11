@@ -5,6 +5,13 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.3](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.2...tauri-plugin-android-update-v0.3.3) (2026-10-11)
+
+
+### Dependencies
+
+* update rust crate serde_json to v1.0.153 ([#55](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/55)) ([2f4f4df](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/2f4f4dfc454352847394b581ddb67ff04bdaad10))
+
 ## [0.3.2](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.1...tauri-plugin-android-update-v0.3.2) (2026-10-11)
 
 
