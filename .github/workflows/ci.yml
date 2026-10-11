@@ -212,6 +212,7 @@ jobs:
         with:
           allowed-skips: >-
             typos,
+            changes,
             fmt,
             clippy,
             test,
