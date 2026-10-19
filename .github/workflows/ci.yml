@@ -199,7 +199,7 @@ jobs:
     needs:
       - check-release
     if: needs.check-release.outputs.is_release != 'true' && github.event_name == 'pull_request' && startsWith(github.head_ref, 'release-please--')
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     permissions:
       contents: read # checkout only; the check never commits anything
     steps:
