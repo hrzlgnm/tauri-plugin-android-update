@@ -5,6 +5,21 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.5](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.4...tauri-plugin-android-update-v0.3.5) (2026-10-21)
+
+
+### Dependencies
+
+* lock file maintenance ([#76](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/76)) ([1ce4234](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/1ce4234f24892bddfe2f59ed6502293c52336ccf))
+* update dependency rollup to v4.64.8 ([#74](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/74)) ([bcbe20e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/bcbe20e5685021f5d55dd42ed42ec5dbb8fcbb1e))
+* update dependency rollup to v4.64.9 ([#75](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/75)) ([6f5329d](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/6f5329dd511226f6382f75494b7819914ce7bdad))
+
+
+### Miscellaneous Chores
+
+* gate release PRs on a fully maximized Cargo.lock ([#73](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/73)) ([a81a379](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/a81a37980ce9de23067beacb2820842acb0d6409))
+* remove release-guard in favor of failure handler ([#71](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/71)) ([7e1467e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/7e1467e6fb3650dc4c8a1ec235fe2ad45ec63c88))
+
 ## [0.3.4](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.3...tauri-plugin-android-update-v0.3.4) (2026-10-19)
 
 
