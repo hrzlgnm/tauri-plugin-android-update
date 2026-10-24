@@ -5,6 +5,25 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.6](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.5...tauri-plugin-android-update-v0.3.6) (2026-10-24)
+
+
+### Dependencies
+
+* lock file maintenance ([#86](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/86)) ([57956ec](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/57956ec7b27440513c33ad15b57ee205e63f7b8c))
+* update dependency rollup to v4.64.10 ([#77](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/77)) ([46a1cb7](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/46a1cb7ee2785af203f441ea48034c08a092939e))
+* update dependency rollup to v4.64.12 ([#83](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/83)) ([4253f39](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/4253f395ddd68f0f2737cf92043605e5a4be9773))
+* update dependency sccache to v0.19.0 ([#85](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/85)) ([1d3affd](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/1d3affdadc41631011c7bcf5a273e65e5233420b))
+* update hrzlgnm/actions action to v2.14.12 ([#80](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/80)) ([20b41a4](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/20b41a4253f8f9c7be6130f904fcd4feefa40f40))
+* update rust crate tauri to v2.12.5 ([#78](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/78)) ([9a5ae02](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/9a5ae02b6ac5cbb5423d9db3aee7b23ccfaf2004))
+* update rust-lang/crates-io-auth-action action to v1.0.6 ([#81](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/81)) ([72fa126](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/72fa1268c31a291c02484d83d391db49dc985534))
+
+
+### Miscellaneous Chores
+
+* drop unused sccache renovate marker comment ([#84](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/84)) ([3940ebf](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/3940ebffbf595b16ee506b3a5c1444aa60cd7ed7))
+* fix misleading re-run note in lockfile-fresh error ([#82](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/82)) ([1f59d40](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/1f59d4077e5efbd78d2d3fa03a27133d505f9181))
+
 ## [0.3.5](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.4...tauri-plugin-android-update-v0.3.5) (2026-10-21)
 
 
