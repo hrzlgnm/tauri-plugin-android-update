@@ -62,9 +62,9 @@ re-entered the graph.
 - Publishing is automatic: release-please owns the draft release
   and tag, the `release.yml` workflow publishes the crate and the
   npm package and only then flips the draft live as a full
-  release; if any publish job fails or is cancelled, a
-  `publish-prerelease-on-failure` job flips the partial draft live
-  as a pre-release instead. There is no manual publish workflow —
+  release; if any publish job fails or is cancelled, the draft
+  stays unpublished so the release can be rebuilt with "Re-run
+  failed jobs". There is no manual publish workflow —
   never publish the draft by hand.
 - Runners: short jobs (tag checks, release-please, draft
   promotion) use `ubuntu-slim`; toolchain and build
