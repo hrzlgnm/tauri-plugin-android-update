@@ -5,6 +5,32 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.3.7](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.6...tauri-plugin-android-update-v0.3.7) (2026-11-07)
+
+
+### Bug Fixes
+
+* **release:** don't publish release on failure to allow rebuilds ([#92](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/92)) ([a405fe2](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/a405fe2093f4c72a4bd31731c4c16ebdeea90b34))
+
+
+### Dependencies
+
+* lock file maintenance ([#90](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/90)) ([3fe39c2](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/3fe39c2bca6074872d13c3cda0a287c94df22300))
+* lock file maintenance ([#93](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/93)) ([53ed317](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/53ed317fcd4eb843485d54904aa9f31b3e4fca74))
+* lock file maintenance ([#97](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/97)) ([e7ef4af](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/e7ef4af14a222a2f138eeedeebc81983974d86fe))
+* update dependency @rollup/plugin-typescript to v12.3.1 ([#87](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/87)) ([73b4353](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/73b4353711742b513aecd8da93e6c13a0ab28578))
+* update dependency node to v26 ([#91](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/91)) ([f953002](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/f953002a9a8e2a81baf253caa635cb4ba4e92e52))
+* update dependency rollup to v4.65.0 ([#89](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/89)) ([d34f2d9](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/d34f2d92e138c4f0dec1b03861bb851c5de51444))
+* update dependency rollup to v4.65.1 ([#94](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/94)) ([f604506](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/f604506a033aaf797bcaf9ace8a23cdd115da7b5))
+* update dependency rollup to v4.66.0 ([#96](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/96)) ([be6aea8](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/be6aea8bdf1eccb0d0faaffb80fdb01083c97e5a))
+* update dependency rollup to v4.67.2 ([#98](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/98)) ([907a496](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/907a49607de7688778b5595f209d267cb1f80430))
+* update dependency rollup to v4.67.3 ([#100](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/100)) ([401ee25](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/401ee25798806045da6e89ab79f262a74fed4b1a))
+* update dependency rollup to v4.67.4 ([#102](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/102)) ([16411eb](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/16411ebf762b253ca1bfbf28f10d2469b5d747f8))
+* update dependency rollup to v4.67.5 ([#103](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/103)) ([34d8fc9](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/34d8fc917075b7601ccf36e41922e6acc0ea2a63))
+* update dependency tslib to v2.9.1 ([#99](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/99)) ([5e71d49](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/5e71d494da3e156badb0748b151ff26573e6216a))
+* update hrzlgnm/actions action to v2.14.13 ([#101](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/101)) ([cdd8e7a](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/cdd8e7a11e141ca3cadc0273bedd314703bbc03a))
+* update rust crate log to v0.4.35 ([#95](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/95)) ([1d5f9a2](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/1d5f9a22e72de2cfd2f806cedf3c042a8aeedb96))
+
 ## [0.3.6](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.5...tauri-plugin-android-update-v0.3.6) (2026-10-24)
 
 
