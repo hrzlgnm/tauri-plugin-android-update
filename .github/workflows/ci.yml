@@ -59,6 +59,8 @@ jobs:
     outputs:
       rust: ${{ steps.filter.outputs.rust }}
       bindings: ${{ steps.filter.outputs.bindings }}
+      docker: ${{ steps.filter.outputs.docker }}
+      branch: ${{ steps.branch.outputs.branch }}
     steps:
       - name: 🔄 Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -84,6 +86,15 @@ jobs:
               - 'rollup.config.js'
               - 'tsconfig.json'
               - '.github/workflows/ci.yml'
+            docker:
+              - '.github/docker/**'
+
+      - name: 🌿 Output branch name
+        id: branch
+        env:
+          HEAD_REF: ${{ github.head_ref || github.ref_name }}
+        run: |
+          echo "branch=$HEAD_REF" >> "$GITHUB_OUTPUT"
 
   fmt:
     name: "📐 fmt"
@@ -222,6 +233,22 @@ jobs:
           fi
           echo "Cargo.lock is fully maximized"
 
+  docker:
+    name: "🐳 docker"
+    needs:
+      - check-release
+      - changes
+    # Fork PRs get a read-only token that cannot push to GHCR, so
+    # skip the publish there (CI Status tolerates the skip) and
+    # only build and push from same-repo runs.
+    if: needs.check-release.outputs.is_release != 'true' && needs.changes.outputs.docker == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+    permissions:
+      contents: read # needed to checkout code for docker build
+      packages: write # needed to push to GHCR
+    uses: hrzlgnm/actions/.github/workflows/docker-reusable.yml@a2e70543f16acf3105219e0e944c323afe88b269 # v2.14.13
+    with:
+      branch: ${{ needs.changes.outputs.branch }}
+
   all-required-green: # This job does nothing and is only used for the branch protection
     name: CI Status
     runs-on: ubuntu-slim
@@ -234,6 +261,7 @@ jobs:
       - bindings
       - typos
       - lockfile-fresh
+      - docker
     if: always()
     steps:
       - name: Check whether the needed jobs succeeded or failed
@@ -246,5 +274,6 @@ jobs:
             clippy,
             test,
             bindings,
+            docker,
             lockfile-fresh
           jobs: ${{ toJSON(needs) }}
