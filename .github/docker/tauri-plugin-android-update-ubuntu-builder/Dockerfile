@@ -15,4 +15,3 @@ RUN apt-get update \
 
 LABEL org.opencontainers.image.source="https://github.com/hrzlgnm/tauri-plugin-android-update"
 LABEL org.opencontainers.image.title="tauri-plugin-android-update Ubuntu Builder"
-LABEL org.opencontainers.image.base.name="ubuntu:22.04"
