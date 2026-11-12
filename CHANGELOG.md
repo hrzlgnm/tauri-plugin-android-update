@@ -5,6 +5,21 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.4.0](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.7...tauri-plugin-android-update-v0.4.0) (2026-11-12)
+
+
+### Features
+
+* add ubuntu builder image ([#108](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/108)) ([48ce6eb](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/48ce6eb47052ef34045d40364007c9ed5e41cc48))
+
+
+### Dependencies
+
+* update dependency rollup to v4.68.1 ([#112](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/112)) ([e8a1ba7](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/e8a1ba74c854d37b10c778a91cb36243031bd2a5))
+* update dependency rollup to v4.68.2 ([#113](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/113)) ([fa9587f](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/fa9587f8987ddf012aff14eb986b6a28bc102f4a))
+* update ubuntu docker tag to v26 ([#109](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/109)) ([66c7030](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/66c7030278c28609c7b677b3797368b4d9174c20))
+* update ubuntu:26.04 docker digest to 065aa86 ([#111](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/111)) ([7b049dd](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/7b049dd7aa4625cb337a3713ee4c6ddc02bd9296))
+
 ## [0.3.7](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.6...tauri-plugin-android-update-v0.3.7) (2026-11-10)
 
 
