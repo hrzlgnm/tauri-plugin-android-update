@@ -126,7 +126,12 @@ jobs:
       - changes
     if: needs.check-release.outputs.is_release != 'true' && needs.changes.outputs.rust == 'true'
     runs-on: ubuntu-latest
+    container: ghcr.io/hrzlgnm/tauri-plugin-android-update-ubuntu-builder:v1@sha256:40cf854527e27c49157d8da6746aa67fa88388f6f3e8063b100b87af052dc526
     steps:
+      - name: 🔧 Configure Git safe directory
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: 🔄 Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -137,10 +142,6 @@ jobs:
         uses: dtolnay/rust-toolchain@39008827e6b4319a349e9a42dfc90579dd25f1ca # stable
         with:
           components: clippy
-
-      - name: 🧰 Install Tauri system dependencies
-        shell: bash
-        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev
 
       - name: 📎 Run clippy and fail if any warnings
         shell: bash
@@ -153,7 +154,12 @@ jobs:
       - changes
     if: needs.check-release.outputs.is_release != 'true' && needs.changes.outputs.rust == 'true'
     runs-on: ubuntu-latest
+    container: ghcr.io/hrzlgnm/tauri-plugin-android-update-ubuntu-builder:v1@sha256:40cf854527e27c49157d8da6746aa67fa88388f6f3e8063b100b87af052dc526
     steps:
+      - name: 🔧 Configure Git safe directory
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: 🔄 Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -162,10 +168,6 @@ jobs:
 
       - name: 🦀 Setup Rust
         uses: dtolnay/rust-toolchain@39008827e6b4319a349e9a42dfc90579dd25f1ca # stable
-
-      - name: 🧰 Install Tauri system dependencies
-        shell: bash
-        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev
 
       - name: 🛠️🚀
         uses: ./.github/actions/setup-sccache
