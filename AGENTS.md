@@ -49,6 +49,12 @@ another without removing the requirement — keep default features. Do
 not re-add the dropped packages without proving a `-sys` crate
 re-entered the graph.
 
+Those jobs run in the
+`ghcr.io/hrzlgnm/tauri-plugin-android-update-ubuntu-builder` image
+(`.github/docker/`, pinned by digest), which has the packages
+preinstalled; add a system package to its `Dockerfile`, not as an
+`apt-get` step in a workflow.
+
 ## Releases
 
 - `CHANGELOG.md`, versions, and `v`-less `tauri-plugin-android-update-vMAJOR.MINOR.PATCH`
