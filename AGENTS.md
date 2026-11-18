@@ -27,6 +27,8 @@ self-install on Google Play–distributed apps.
 - Workflows: `actionlint .github/workflows/*.yml`.
 - Text: `typos` (config in `typos.toml`).
 - Renovate config: `npx --yes -p renovate@latest renovate-config-validator .github/renovate.json5`.
+- Markdown-only commits (`*.md`): run only `typos`, in place of the
+  Rust, JavaScript and workflow checks.
 - Every commit must compile, pass its tests, and be format- and
   lint-clean. No `unsafe` code, no `#[allow(warnings)]`.
 
