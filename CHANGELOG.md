@@ -5,6 +5,49 @@ All notable changes to `tauri-plugin-android-update` will be documented in this 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This changelog is auto-generated from commits that modify this crate.
 
+## [0.4.0](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.7...tauri-plugin-android-update-v0.4.0) (2026-11-21)
+
+
+### Features
+
+* add ubuntu builder image ([#108](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/108)) ([48ce6eb](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/48ce6eb47052ef34045d40364007c9ed5e41cc48))
+
+
+### Dependencies
+
+* lock file maintenance ([#116](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/116)) ([98f9679](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/98f9679fe117244c5cd2013d20fc3b6be7b5ae71))
+* update dependency @tauri-apps/api to v2.12.5 ([#127](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/127)) ([41de59e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/41de59eb86add25aaeb32e12a98547912afdbf03))
+* update dependency rollup to v4.68.1 ([#112](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/112)) ([e8a1ba7](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/e8a1ba74c854d37b10c778a91cb36243031bd2a5))
+* update dependency rollup to v4.68.2 ([#113](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/113)) ([fa9587f](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/fa9587f8987ddf012aff14eb986b6a28bc102f4a))
+* update dependency rollup to v4.68.3 ([#117](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/117)) ([d35ecad](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/d35ecaddd68400120eecfb6011ec8db6f58c208f))
+* update dependency rollup to v4.68.4 ([#126](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/126)) ([d093b0e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/d093b0e4d25c66717309cd73f2129698e84cbf28))
+* update dependency rollup to v4.68.5 ([#128](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/128)) ([18ee23e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/18ee23e9ab36cd024a3002f69a3f63ab903b9739))
+* update dependency rollup to v4.68.6 ([#129](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/129)) ([42c01d0](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/42c01d021206d8aae894c807bfed61b7964b5e94))
+* update dtolnay/rust-toolchain digest to 3900882 ([#114](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/114)) ([0264692](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/02646924b9b684ce6b9881cff586e9aa55608399))
+* update hrzlgnm/actions action to v2.15.0 ([#124](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/124)) ([5e192b6](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/5e192b65f68a44f2511260e6548084c310a3a151))
+* update tauri monorepo to v2.12.6 ([#118](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/118)) ([cde533e](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/cde533ef860d2fd94d24ec3c9265741416d20921))
+* update tauri monorepo to v2.12.7 ([#121](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/121)) ([85ccc47](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/85ccc473ebd4adc3ccbdfeed9c77aee2bc217899))
+* update ubuntu docker tag to v26 ([#109](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/109)) ([66c7030](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/66c7030278c28609c7b677b3797368b4d9174c20))
+* update ubuntu:26.04 docker digest to 065aa86 ([#111](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/111)) ([7b049dd](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/7b049dd7aa4625cb337a3713ee4c6ddc02bd9296))
+* update ubuntu:26.04 docker digest to d66b366 ([#115](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/115)) ([eebcb1a](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/eebcb1a1cdd5b2a562b469752d1e521a31a9bfe8))
+
+
+### Documentation
+
+* **agents:** limit Markdown-only commits to text checks ([#120](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/120)) ([2db40ab](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/2db40abb24da4ff1ed4d02882c7f58a8bf5e938a))
+* **agents:** name the committing tool in AI attribution trailers ([#119](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/119)) ([7b6ffbd](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/7b6ffbd8d1ab64eed38b0a1d447e697ab48ea431))
+
+
+### Miscellaneous Chores
+
+* add missing SPDX license headers ([#122](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/122)) ([1dfc5a1](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/1dfc5a180e42daf8e6838eea6341ec4f92dbcbd8))
+
+
+### Continuous Integration
+
+* check SPDX headers with the shared reusable workflow ([#123](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/123)) ([c9f12e7](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/c9f12e73042172823f517d13f070ab3261f04cd9))
+* run Rust jobs in the prebuilt Ubuntu builder image ([#125](https://github.com/hrzlgnm/tauri-plugin-android-update/issues/125)) ([fa67ed1](https://github.com/hrzlgnm/tauri-plugin-android-update/commit/fa67ed106590572de154dfadf38b04114e466bdc))
+
 ## [0.3.7](https://github.com/hrzlgnm/tauri-plugin-android-update/compare/tauri-plugin-android-update-v0.3.6...tauri-plugin-android-update-v0.3.7) (2026-11-10)
 
 
